@@ -1,0 +1,63 @@
+{% extends 'appointments/base.html' %}
+
+{% block title %}Home | Hospital Appointment Portal{% endblock %}
+
+{% block content %}
+
+<section class="hero-section text-center p-5 rounded-4 mb-5">
+    <h1 class="display-4 fw-bold">Your Health, Our Priority</h1>
+    <p class="lead mt-3">
+        Find trusted doctors and book your hospital appointments easily.
+    </p>
+    <a href="{% url 'book_appointment' %}" class="btn btn-primary btn-lg mt-3">
+        Book an Appointment
+    </a>
+</section>
+
+<h2 class="text-center mb-4">Find Your Doctor</h2>
+
+<form method="get" class="row g-3 mb-4">
+    <div class="col-md-5">
+        <input type="text" name="search" class="form-control" placeholder="Search doctor by name" value="{{ search }}">
+    </div>
+
+    <div class="col-md-5">
+        <select name="specialty" class="form-select">
+            <option value="">All Specialties</option>
+            {% for specialty, label in specialties %}
+            {% if selected_specialty == specialty %}selected{% endif %}
+            {{ label }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Search</button>
+    </div>
+</form>
+
+<div class="row g-4">
+    {% for doctor in doctors %}
+    <div class="col-md-6 col-lg-4">
+        <div class="card doctor-card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">{{ doctor.name }}</h5>
+                <p class="text-primary fw-semibold">{{ doctor.specialty }}</p>
+                <p>{{ doctor.qualification }}</p>
+                <p>Experience: {{ doctor.experience }} years</p>
+
+                <a href="{% url 'book_appointment' %}" class="btn btn-outline-primary">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center">
+        <p>No doctors found. Please try another search.</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

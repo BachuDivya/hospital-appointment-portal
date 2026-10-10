@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+    color: #263449;
+    margin: 0;
+}
+
+.navbar {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #d9f0ff, #e9e4ff);
+    color: #183b65;
+    margin-top: 20px;
+}
+
+.hero-section h1 {
+    letter-spacing: -1px;
+}
+
+.doctor-card {
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(30, 75, 120, 0.15) !important;
+}
+
+.card-title {
+    color: #174b87;
+    font-weight: bold;
+}
+
+.form-control,
+.form-select {
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 9px;
+}
+
+footer {
+    color: #63748a;
+    background: #e8eff7;
+}
