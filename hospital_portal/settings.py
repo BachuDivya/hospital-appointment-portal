@@ -25,12 +25,20 @@ SECRET_KEY = os.environ.get(
     "django-insecure-local-development-only-key"
 )
 
-DEBUG = os.environ.get("RENDER", "False") != "True"
+if "DEBUG" in os.environ:
+    DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "t")
+else:
+    DEBUG = os.environ.get("RENDER", "").lower() != "true"
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
+RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
 CSRF_TRUSTED_ORIGINS = [
     "https://*.onrender.com",
 ]
+
 
 
 # Application definition
