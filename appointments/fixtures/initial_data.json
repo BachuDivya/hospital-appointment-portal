@@ -1,0 +1,167 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$xf4c3eKQvnS0WxuKkmx0Wb$I7ZxPlFeAsBhgYXlL5sU7uBx9x0IS9DTECfpiE39W74=",
+      "last_login": "2026-10-11T08:49:17.864Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "divyabachu9@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-10-10T14:54:47.687Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$tqCxlxxSitatDlGNCqwhEw$KxjW6ey2PWRH+V01qfZP9xkz/3gB6HlP62b7Q1vmg/0=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "Admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "abc@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-10-11T08:45:36.015Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "appointments.doctor",
+    "pk": 1,
+    "fields": {
+      "name": "Dr. Priya Sharma",
+      "specialty": "Cardiology",
+      "qualification": "MBBS, MD",
+      "experience": 8,
+      "available": true
+    }
+  },
+  {
+    "model": "appointments.doctor",
+    "pk": 2,
+    "fields": {
+      "name": "Sindhu",
+      "specialty": "Pediatrics",
+      "qualification": "MBBS",
+      "experience": 2,
+      "available": true
+    }
+  },
+  {
+    "model": "appointments.doctor",
+    "pk": 3,
+    "fields": {
+      "name": "Divya",
+      "specialty": "Orthopedics",
+      "qualification": "MBBS",
+      "experience": 3,
+      "available": true
+    }
+  },
+  {
+    "model": "appointments.doctor",
+    "pk": 4,
+    "fields": {
+      "name": "Rajani",
+      "specialty": "Neurology",
+      "qualification": "MBBS, MD",
+      "experience": 5,
+      "available": true
+    }
+  },
+  {
+    "model": "appointments.doctor",
+    "pk": 5,
+    "fields": {
+      "name": "Dr. Priya Sharma",
+      "specialty": "Cardiology",
+      "qualification": "MBBS, MD",
+      "experience": 5,
+      "available": true
+    }
+  },
+  {
+    "model": "appointments.patient",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "phone": "0000000000",
+      "address": ""
+    }
+  },
+  {
+    "model": "appointments.appointment",
+    "pk": 1,
+    "fields": {
+      "doctor": 1,
+      "patient": 1,
+      "appointment_date": "2026-10-18",
+      "time_slot": "09:00",
+      "reason": "General health checkup",
+      "status": "Pending",
+      "created_at": "2026-10-10T16:06:25.532Z"
+    }
+  },
+  {
+    "model": "appointments.appointment",
+    "pk": 4,
+    "fields": {
+      "doctor": 3,
+      "patient": 1,
+      "appointment_date": "2026-10-18",
+      "time_slot": "09:00",
+      "reason": "Bone injury",
+      "status": "Pending",
+      "created_at": "2026-10-10T17:04:53.373Z"
+    }
+  },
+  {
+    "model": "appointments.appointment",
+    "pk": 5,
+    "fields": {
+      "doctor": 2,
+      "patient": 1,
+      "appointment_date": "2026-10-18",
+      "time_slot": "09:00",
+      "reason": "Fever",
+      "status": "Pending",
+      "created_at": "2026-10-11T09:14:06.394Z"
+    }
+  },
+  {
+    "model": "appointments.appointment",
+    "pk": 3,
+    "fields": {
+      "doctor": 1,
+      "patient": 1,
+      "appointment_date": "2026-10-18",
+      "time_slot": "10:00",
+      "reason": "General health checkup",
+      "status": "Pending",
+      "created_at": "2026-10-10T16:13:52.229Z"
+    }
+  },
+  {
+    "model": "appointments.appointment",
+    "pk": 2,
+    "fields": {
+      "doctor": 1,
+      "patient": 1,
+      "appointment_date": "2026-10-19",
+      "time_slot": "09:00",
+      "reason": "Fever",
+      "status": "Confirmed",
+      "created_at": "2026-10-10T16:13:22.835Z"
+    }
+  }
+]
